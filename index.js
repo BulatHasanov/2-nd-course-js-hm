@@ -1,5 +1,5 @@
 
-/*//Задание 1
+//Задание 1
 let a;
 a=10;
 console.log(alert(a));
@@ -49,7 +49,7 @@ console.log(alert(num));
 //Задание 8
 let age = prompt(`Сколько вам лет?`);
 console.log(alert(age));
-*/
+
 //Задание 9.0
 const user = {
     name: `Булат`,
