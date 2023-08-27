@@ -1,4 +1,4 @@
-
+/*
 //Задание 1
 let a;
 a=10;
@@ -70,3 +70,74 @@ alert( user[info] );
 //Задание 10
 let yourName = prompt(`Укажите ваще имя`);
 alert(`Привет, ${yourName}!`);
+*/
+
+                        // Занятие 2.3
+// Задание 1
+let password = 'пароль';
+let userPassword = String(prompt('Введите пароль'));
+let message = (password === userPassword) ? 'Пароль введен верно' : 'Пароль введен неправильно';
+console.log(message);
+
+//Задание 2
+let C = prompt('Введите число');
+let result = (C>0 && C<10) ? 'Верно' : 'Неверно';
+console.log(result);
+
+//Задание 3 
+let d = 10;
+let c = 500;
+
+let newResult = ((d||e)>100) ? 'верно' : 'неверно';
+console.log(newResult)
+
+//Задание 4
+let a = '2';
+let b = '3';
+a = Number(a);
+b = Number(b);
+console.log(Number(a+b));
+
+//Задание 5
+let monthNumber = prompt('Введите номер месяца');
+switch (monthNumber) {
+    case '1':
+        console.log('Сезон Зима');
+        break;
+    case '2':
+        console.log('Сезон Зима');
+        break;
+    case '3':
+        console.log('Сезон Весна');
+        break;
+    case '4':
+        console.log('Сезон Весна');
+        break;
+    case '5':
+        console.log('Сезон Весна');
+        break;
+    case '6':
+        console.log('Сезон Лето');
+        break;
+    case '7':
+        console.log('Сезон Лето');
+        break;
+    case '8':
+        console.log('Сезон Лето');
+        break;
+    case '9':
+        console.log('Сезон Осень');
+        break;
+    case '10':
+        console.log('Сезон Осень');
+        break;
+    case '11':
+        console.log('Сезон Осень');
+        break;
+    case '12':
+        console.log('Сезон Зима');
+        break;                                        
+    default:
+        console.log('Такого месяца не существует')
+        break;
+}
