@@ -88,8 +88,8 @@ console.log(result);
 let d = 10;
 let c = 500;
 
-let newResult = ((d||e)>100) ? 'верно' : 'неверно';
-console.log(newResult)
+let newResult = (d>100 || c>100) ? 'верно' : 'неверно';
+console.log(newResult);
 
 //Задание 4
 let a = '2';
@@ -101,42 +101,26 @@ console.log(Number(a+b));
 //Задание 5
 let monthNumber = prompt('Введите номер месяца');
 switch (monthNumber) {
+    case '12':
     case '1':
-        console.log('Сезон Зима');
-        break;
-    case '2':
+    case '2':  
         console.log('Сезон Зима');
         break;
     case '3':
-        console.log('Сезон Весна');
-        break;
-    case '4':
-        console.log('Сезон Весна');
-        break;
+    case '4':    
     case '5':
         console.log('Сезон Весна');
         break;
     case '6':
-        console.log('Сезон Лето');
-        break;
     case '7':
-        console.log('Сезон Лето');
-        break;
-    case '8':
+    case '8':        
         console.log('Сезон Лето');
         break;
     case '9':
-        console.log('Сезон Осень');
-        break;
     case '10':
+    case '11':        
         console.log('Сезон Осень');
-        break;
-    case '11':
-        console.log('Сезон Осень');
-        break;
-    case '12':
-        console.log('Сезон Зима');
-        break;                                        
+        break;                                     
     default:
         console.log('Такого месяца не существует')
         break;
