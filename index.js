@@ -70,7 +70,7 @@ alert( user[info] );
 //Задание 10
 let yourName = prompt(`Укажите ваще имя`);
 alert(`Привет, ${yourName}!`);
-*/
+
 
                         // Занятие 2.3
 // Задание 1
@@ -124,4 +124,58 @@ switch (monthNumber) {
     default:
         console.log('Такого месяца не существует')
         break;
+}*/
+
+// while(true) {
+//     const msg = prompt('Введите сообщение');
+//     console.log(msg);
+//     if (msg === 'break') {
+//         break;
+//     }
+// }
+
+                             //Занятие 2.4
+//Задание 1
+let i = 0;
+
+while (i<2) {
+    console.log('Привет');
+    i++;
+}
+// Задание 2
+let I = 1;
+while (I<=5) {
+    console.log(I);
+    I++;
+}
+
+//Задание 3
+for (let i = 7; i < 23; i++) {
+    console.log(i);  
+}
+
+//Задание 4
+const obj = {
+    'Коля':200,
+    'Вася':300,
+    'Петя':400
+}
+for (let name in obj) {
+    console.log(`${name} зарабатывает ${obj[name]}`)
+    }
+
+//Задание 5
+for (let n = 1000, num = 0; n > 50; ) {
+    num++;
+    n = n/2;
+    if (n<50) {
+        console.log(n);
+        console.log(num); 
+    }
+}
+
+//Задание 6
+for (let dayOfTheWeek = 4; Number(dayOfTheWeek) < 31;) {
+    console.log(`Сегодня пятница, ${dayOfTheWeek}-е число. Необходимо подготовить отчет.`);
+    dayOfTheWeek = dayOfTheWeek + 7;
 }
