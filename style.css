@@ -1,0 +1,16 @@
+header{
+    width: 300px;
+    border: 1px;
+}
+.header{
+    width: 600px;
+    border: 1px;
+    border-color: black;
+}
+.title{
+    border: 1px;
+    border-color: black;
+}
+.subtitle{
+
+}
