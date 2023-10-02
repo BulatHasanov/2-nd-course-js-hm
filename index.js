@@ -451,120 +451,237 @@ switch (monthNumber) {
 //   getStrLength(['god', 'name', 'object', 'subzero', 'wasabi']);
 
 
-/////////Занятие 2.7
-//Задание 1
-let str = 'js';
-let result = str.toUpperCase();
-console.log(result);
+// /////////Занятие 2.7
+// //Задание 1
+// let str = 'js';
+// let result = str.toUpperCase();
+// console.log(result);
 
-//Задание 2
+// //Задание 2
 
-function wordsSearch(words, str) {
-    let arrWord = [];
-      words.forEach((el) => { 
-          if (el.toLowerCase().startsWith(str.toLowerCase())) {
-              arrWord.push(el);
-          }
-      });
-      console.log(arrWord);
-  }
-  wordsSearch(['Квазимодо', 'Пакет', 'Палитра', 'Пандус', 'Павильон'], 'па');
+// function wordsSearch(words, str) {
+//     let arrWord = [];
+//       words.forEach((el) => { 
+//           if (el.toLowerCase().startsWith(str.toLowerCase())) {
+//               arrWord.push(el);
+//           }
+//       });
+//       console.log(arrWord);
+//   }
+//   wordsSearch(['Квазимодо', 'Пакет', 'Палитра', 'Пандус', 'Павильон'], 'па');
 
-//Задание 3
-// Округлите число 32.58884:
-//  До меньшего целого
-//  До большего целого
-//  До ближайшего целого
+// //Задание 3
+// // Округлите число 32.58884:
+// //  До меньшего целого
+// //  До большего целого
+// //  До ближайшего целого
 
-let x = 32.58884;
-let xFloor = Math.floor(x);
-let xCeil = Math.ceil(x);
-let xRound = Math.round(x);
-console.log(xFloor);
-console.log(xCeil);
-console.log(xRound);
+// let x = 32.58884;
+// let xFloor = Math.floor(x);
+// let xCeil = Math.ceil(x);
+// let xRound = Math.round(x);
+// console.log(xFloor);
+// console.log(xCeil);
+// console.log(xRound);
 
-// Задание 4
-// Даны числа 52, 53, 49, 77, 21, 32. Необходимо найти среди этих чисел наименьшее и наибольшее числа и вывести их в консоль.
+// // Задание 4
+// // Даны числа 52, 53, 49, 77, 21, 32. Необходимо найти среди этих чисел наименьшее и наибольшее числа и вывести их в консоль.
 
-const num = [52, 53, 49, 77, 21, 32];
-console.log(Math.max(...num));
-console.log(Math.min(...num));
+// const num = [52, 53, 49, 77, 21, 32];
+// console.log(Math.max(...num));
+// console.log(Math.min(...num));
+
+// // Задание 5
+// // Создайте функцию, которая будет выводить в консоль рандомное число от 1 до 10.
+
+// function getRandomNumb(max) {
+//     return Math.floor(Math.random() * max);
+// }
+//   getRandomNumb(10);
+
+// // Задание 6
+// // Напишите функцию, которая будет принимать на вход целое число, а возвращать массив случайных целых чисел от 0 до переданного числа. Длина массива должна быть в 2 раза меньше переданного числа.
+
+
+// function getRandomArrNumbers(num) {
+//     let arrNumbers = [];
+//     for (let i = 0; i < Math.floor(num / 2); i++) {
+//       arrNumbers.push(Math.round(Math.random() * num));
+//     }
+//   console.log(arrNumbers);
+// }
+// getRandomArrNumbers(12);
+
+
+// // Задание 7
+// // Напишите функцию, которая на вход принимает 2 целых числа, а в качестве результата возвращает случайное целое число в этом диапазоне.
+
+// function getRandomNumbers(minValue, maxValue) {
+//     return Math.round(Math.random() * (maxValue - minValue) + minValue);
+//   }
+// console.log(getRandomNumbers(5, 25));
+
+
+// // Задание 8
+// // Выведите в консоль текущую дату в стандартном режиме. Используйте один из трех рассмотренных в уроке способов.
+
+// let date = new Date();
+// console.log(date);
+
+
+// // Задание 9
+// // Создайте переменную currentDate и сохраните в нее текущую дату. Выведите дату, которая наступит через 73 дня после текущей.
+
+// const currentDate = new Date();
+// currentDate.setDate(currentDate.getDate() + 73);
+// console.log(currentDate);
+
+// // Задание 10
+// // Написать функцию, которая на вход принимает дату, а возвращает ее отображение в виде:
+// //  Дата: <число> <месяц на русском> <год> - это <день недели на русском>.
+// //  Время: <часы>:<минуты>:<секунды>
+// // Время, которое будет выведено, также хранится в объекте Date.
+
+
+// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"];
+
+// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+// function getData(data) {
+//     let now = new Date(data);
+//     let fullDate = "Дата: " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " - это " + days[now.getDay()]; 
+//     let hour = now.getHours(); 
+//     let minute = now.getMinutes(); 
+//     let second = now.getSeconds(); 
+//     if (minute < 10) { 
+//         minute = "0" + minute; 
+//     }
+//     if (second < 10) { 
+//         second = "0" + second; 
+//     }
+    
+//     let time = "Время: " + hour + ":" + minute + ":" + second;
+    
+//     console.log(fullDate);
+//     console.log(time);
+// }
+// getData('2022-05-25 9:00');
+
+//////////////////Занятие 2.8
+// // Задание 1
+// // С помощью метода массива sort отсортируйте массив people по возрастанию возраста и выведите их в консоль.
+
+
+// const people = [
+//     { name: 'Глеб', age: 29 },
+//     { name: 'Анна', age: 17 },
+//     { name: 'Олег', age: 7 },
+//     { name: 'Оксана', age: 47 }
+//  ];
+//  people.sort(function (a, b) {
+//    if (a.age > b.age) {
+//      return 1;
+//    }
+//    if (a.age < b.age) {
+//      return -1;
+//    }
+//    // a должно быть равным b
+//    return 0;
+//  });
+//  console.log(people)
+
+
+// // Задание 2
+// // Реализуйте функцию filter, которая должна работать аналогично методу массива `filter. За основу возьмите функцию map, которую мы реализовывали на уроке. Чтобы из функции map сделать filter, нужно, в зависимости от результата вызова ruleFunction, принимать решение о том, добавлять в результирующий массив очередной элемент или нет.
+
+
+// function isPositive(number) {
+//     return number > 0;
+// }
+// function isMale(people) {
+//     return people.gender === 'male'
+// }
+
+// function filter(array, ruleFunction) {
+//   const result = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (ruleFunction(array[i])) {
+//       result.push(array[i]);
+//     }
+//   }
+//   return result;
+// };
+    
+// console.log(filter([3, -4, 1, 9], isPositive)); 
+
+// const people = [
+//     {name: 'Глеб', gender: 'male'},
+//     {name: 'Анна', gender: 'female'},
+//     {name: 'Олег', gender: 'male'},
+//     {name: 'Оксана', gender: 'female'}
+// ];
+
+// console.log(filter(people, isMale));
+
+// // Задание 3
+// // Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату. Последней строкой должно выводиться сообщение «30 секунд прошло».
+
+// const timer = (deadline) => {
+// 	const interval = setInterval(() => {
+// 		console.log(new Date());
+// 	}, 3000);
+
+
+// 	setTimeout(() => {
+//     clearInterval(interval);
+//     console.log('30 секунд прошло!')
+//   }, deadline * 1000)
+// };
+
+// timer(30);
+
+// // Задание 4
+// // Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска. Допишите функцию delayForSecond так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
+
+
+// function delayForSecond(callback) {
+//     setTimeout(callback, 1000);
+//   callback();
+// }
+
+// delayForSecond(function () {
+//   console.log('Привет, Глеб!');
+// })
 
 // Задание 5
-// Создайте функцию, которая будет выводить в консоль рандомное число от 1 до 10.
-
-function getRandomNumb(max) {
-    return Math.floor(Math.random() * max);
-}
-  getRandomNumb(10);
-
-// Задание 6
-// Напишите функцию, которая будет принимать на вход целое число, а возвращать массив случайных целых чисел от 0 до переданного числа. Длина массива должна быть в 2 раза меньше переданного числа.
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
+//   Привет, Глеб!
+//   Прошла одна секунда
+// Правильный порядок:
+//    Прошла одна секунда
+//    Привет, Глеб!
+// Исправьте код, чтобы он выводил сообщения в правильном порядке
 
 
-function getRandomArrNumbers(num) {
-    let arrNumbers = [];
-    for (let i = 0; i < Math.floor(num / 2); i++) {
-      arrNumbers.push(Math.round(Math.random() * num));
-    }
-  console.log(arrNumbers);
-}
-getRandomArrNumbers(12);
+// // Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
+// // а затем вызывает переданный колбэк
+// function delayForSecond(cb) {
+//     setTimeout(() => {
+//         console.log('Прошла одна секунда');
+// 				if(cb) { 	cb(); }
 
+//     }, 1000)
+// }
 
-// Задание 7
-// Напишите функцию, которая на вход принимает 2 целых числа, а в качестве результата возвращает случайное целое число в этом диапазоне.
+// // Функция sayHi выводит в консоль приветствие для указанного имени
 
-function getRandomNumbers(minValue, maxValue) {
-    return Math.round(Math.random() * (maxValue - minValue) + minValue);
-  }
-console.log(getRandomNumbers(5, 25));
+// function sayHi (name) {
+//     console.log(`Привет, ${name}!`);
+// }
+// // Код выше менять нельзя
 
-
-// Задание 8
-// Выведите в консоль текущую дату в стандартном режиме. Используйте один из трех рассмотренных в уроке способов.
-
-let date = new Date();
-console.log(date);
-
-
-// Задание 9
-// Создайте переменную currentDate и сохраните в нее текущую дату. Выведите дату, которая наступит через 73 дня после текущей.
-
-const currentDate = new Date();
-currentDate.setDate(currentDate.getDate() + 73);
-console.log(currentDate);
-
-// Задание 10
-// Написать функцию, которая на вход принимает дату, а возвращает ее отображение в виде:
-//  Дата: <число> <месяц на русском> <год> - это <день недели на русском>.
-//  Время: <часы>:<минуты>:<секунды>
-// Время, которое будет выведено, также хранится в объекте Date.
-
-
-const days = ["Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"];
-
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-
-function getData(data) {
-    let now = new Date(data);
-    let fullDate = "Дата: " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " - это " + days[now.getDay()]; 
-    let hour = now.getHours(); 
-    let minute = now.getMinutes(); 
-    let second = now.getSeconds(); 
-    if (minute < 10) { 
-        minute = "0" + minute; 
-    }
-    if (second < 10) { 
-        second = "0" + second; 
-    }
-    
-    let time = "Время: " + hour + ":" + minute + ":" + second;
-    
-    console.log(fullDate);
-    console.log(time);
-}
-getData('2022-05-25 9:00');
-
+// // Нужно изменить код ниже:
+// delayForSecond(() => {
+//     sayHi('Глеб');
+// });
