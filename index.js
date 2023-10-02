@@ -310,142 +310,378 @@ switch (monthNumber) {
 // console.log(circle2.getArea());
 // console.log(circle2.getPerimeter());
 
-////////Занятие 2.6
-// Задание 1. Дан массив: [1, 5, 4, 10, 0, 3].
-// Необходимо создать цикл, который будет выводить элементы массива до тех пор, пока не встретит значение 10. После вывода значения 10 в консоль цикл должен прекратить свою работу.
+// ////////Занятие 2.6
+// // Задание 1. Дан массив: [1, 5, 4, 10, 0, 3].
+// // Необходимо создать цикл, который будет выводить элементы массива до тех пор, пока не встретит значение 10. После вывода значения 10 в консоль цикл должен прекратить свою работу.
 
-const numbers = [1, 5, 4, 10, 0, 3];
-    for (i = 0; i < numbers.length; i++) {
-        if (numbers[i] == 10) break;
-        console.log(numbers[i])
-    }
+// const numbers = [1, 5, 4, 10, 0, 3];
+//     for (i = 0; i < numbers.length; i++) {
+//         if (numbers[i] == 10) break;
+//         console.log(numbers[i])
+//     }
 
-//  Задание 2
-// Дан массив: [1, 5, 4, 10, 0, 3]. Найдите позицию (индекс) числа 4 в этом массиве.
+// //  Задание 2
+// // Дан массив: [1, 5, 4, 10, 0, 3]. Найдите позицию (индекс) числа 4 в этом массиве.
 
-const numbs = [1, 5, 4, 10, 0, 3];
+// const numbs = [1, 5, 4, 10, 0, 3];
 
-console.log(numbs.indexOf(4));
+// console.log(numbs.indexOf(4));
 
-//Задание 3
-//Дан массив чисел:[1, 3, 5, 10, 20]. С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
+// //Задание 3
+// //Дан массив чисел:[1, 3, 5, 10, 20]. С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
 
-const num = [1, 3, 5, 10, 20];
-let joinNum = num.join(" ");
-console.log(joinNum);
+// const num = [1, 3, 5, 10, 20];
+// let joinNum = num.join(" ");
+// console.log(joinNum);
 
-// Задание 4
-// С помощью вложенных циклов создайте многомерный массив вида: [[1, 1, 1], [1, 1, 1], [1, 1, 1]].
+// // Задание 4
+// // С помощью вложенных циклов создайте многомерный массив вида: [[1, 1, 1], [1, 1, 1], [1, 1, 1]].
 
-const arr = [];
-for (let i = 0; i < 3; i++) {
-    arr[i] = [];
-    for (j = 0; j < 3; ++j) {
-        arr[i].push(1)
-    }
+// const arr = [];
+// for (let i = 0; i < 3; i++) {
+//     arr[i] = [];
+//     for (j = 0; j < 3; ++j) {
+//         arr[i].push(1)
+//     }
 
-}
-console.log(arr)
+// }
+// console.log(arr)
+
+// // Задание 5
+// // Дан массив: [1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.
+
+// const oneTwo = [1, 1, 1];
+// oneTwo.push(2, 2, 2);
+// console.log(oneTwo);
+
+// // Задание 6
+// // Дан массив: [9, 8, 7, 'a', 6, 5]. С помощью метода sort отсортируйте массив и удалите букву 'a' из данного массива. В результате работы программы вывести массив, состоящий из цифр.
+
+// let sortArr = [9, 8, 7, 'a', 6, 5];
+// sortArr.sort()
+// console.log(sortArr);
+// sortArr.pop();
+// console.log(sortArr);
+
+// // Задание 7
+// // Дан массив: [9, 8, 7, 6, 5]. Попросить пользователя угадать число (использовать prompt). Если значение, которое ввёл пользователь, есть в массиве, вывести в alert «Угадал», в противном случае вывести «Не угадал».
+
+// const array = [9, 8, 7, 6, 5];
+// let userAnswer = prompt('Угадай число!');
+// userAnswer = Number(userAnswer);
+// // console.log(typeof userAnswer)
+// let search = array.includes(userAnswer);
+// // console.log(search);
+// if (search == true) {
+//     alert('Угадал');
+//     console.log('Угадал');
+// } else {
+//     alert('Не угадал');
+//     console.log('Не угадал');
+// }
+
+// // Задание 8
+// // Дана строка: 'abcdef'. Необходимо, чтобы программа вывела в консоль 'fedcba'.
+
+// let str = 'abcdef';
+// let arrayStr = str.split('');
+// // console.log(arrayStr);
+// let reverseArrayStr = arrayStr.reverse();
+// // console.log(reverseArrayStr);
+// reverseArrayStr = reverseArrayStr.join('');
+// console.log(reverseArrayStr);
+
+// // Задание 9
+// // Дан массив: [[1, 2, 3,],[4, 5, 6]]. Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].
+
+// const arr = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//   ];
+//   const arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       arr2.push(arr[i][j]);
+//       //console.log(arr[i][j]);
+//     }
+//   }
+  
+// console.log(arr2);
+
+// // //Задание 10
+// const numbers = [3, 7, 2, 8, 5, 9, 1, 4, 6];
+// for (let i = 0; i < numbers.length; i++) {
+//     if (i + 1 < numbers.length) {
+//     let sum = numbers[i] + numbers[i + 1];
+//     console.log(`Сумма текущего элемента ${numbers[i]} и следующего элемента: ${sum}`);
+//     }
+// }
+
+
+// // //Задание 11
+// let getArrSqr = function (array) {
+//     const arrSqr = [];
+//     for (let i = 0; i < array.length; i++) {
+//         arrSqr.push(Math.pow(array[i], 2));
+//     }
+//     return arrSqr;
+// }
+// getArrSqr([2, 5, 6, 3, 5]);
+
+// // Задание 13
+// // Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив содержащий только отрицательные значения.
+
+// function filterPositive(array) {
+//     let posArr = array.filter(el => el < 0);
+//     return posArr;
+//   }
+// filterPositive([-2, 5, -1, 9, -9]);
+
+
+// //Задание 12
+// // Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
+
+// function getStrLength(arrStr){
+//     let strLength = [];
+//     for(let i = 0; i < arrStr.length; i++) {
+//       strLength.push(arrStr[i].length)  
+//     }
+//     return strLength
+//   }
+//   getStrLength(['god', 'name', 'object', 'subzero', 'wasabi']);
+
+
+// /////////Занятие 2.7
+// //Задание 1
+// let str = 'js';
+// let result = str.toUpperCase();
+// console.log(result);
+
+// //Задание 2
+
+// function wordsSearch(words, str) {
+//     let arrWord = [];
+//       words.forEach((el) => { 
+//           if (el.toLowerCase().startsWith(str.toLowerCase())) {
+//               arrWord.push(el);
+//           }
+//       });
+//       console.log(arrWord);
+//   }
+//   wordsSearch(['Квазимодо', 'Пакет', 'Палитра', 'Пандус', 'Павильон'], 'па');
+
+// //Задание 3
+// // Округлите число 32.58884:
+// //  До меньшего целого
+// //  До большего целого
+// //  До ближайшего целого
+
+// let x = 32.58884;
+// let xFloor = Math.floor(x);
+// let xCeil = Math.ceil(x);
+// let xRound = Math.round(x);
+// console.log(xFloor);
+// console.log(xCeil);
+// console.log(xRound);
+
+// // Задание 4
+// // Даны числа 52, 53, 49, 77, 21, 32. Необходимо найти среди этих чисел наименьшее и наибольшее числа и вывести их в консоль.
+
+// const num = [52, 53, 49, 77, 21, 32];
+// console.log(Math.max(...num));
+// console.log(Math.min(...num));
+
+// // Задание 5
+// // Создайте функцию, которая будет выводить в консоль рандомное число от 1 до 10.
+
+// function getRandomNumb(max) {
+//     return Math.floor(Math.random() * max);
+// }
+//   getRandomNumb(10);
+
+// // Задание 6
+// // Напишите функцию, которая будет принимать на вход целое число, а возвращать массив случайных целых чисел от 0 до переданного числа. Длина массива должна быть в 2 раза меньше переданного числа.
+
+
+// function getRandomArrNumbers(num) {
+//     let arrNumbers = [];
+//     for (let i = 0; i < Math.floor(num / 2); i++) {
+//       arrNumbers.push(Math.round(Math.random() * num));
+//     }
+//   console.log(arrNumbers);
+// }
+// getRandomArrNumbers(12);
+
+
+// // Задание 7
+// // Напишите функцию, которая на вход принимает 2 целых числа, а в качестве результата возвращает случайное целое число в этом диапазоне.
+
+// function getRandomNumbers(minValue, maxValue) {
+//     return Math.round(Math.random() * (maxValue - minValue) + minValue);
+//   }
+// console.log(getRandomNumbers(5, 25));
+
+
+// // Задание 8
+// // Выведите в консоль текущую дату в стандартном режиме. Используйте один из трех рассмотренных в уроке способов.
+
+// let date = new Date();
+// console.log(date);
+
+
+// // Задание 9
+// // Создайте переменную currentDate и сохраните в нее текущую дату. Выведите дату, которая наступит через 73 дня после текущей.
+
+// const currentDate = new Date();
+// currentDate.setDate(currentDate.getDate() + 73);
+// console.log(currentDate);
+
+// // Задание 10
+// // Написать функцию, которая на вход принимает дату, а возвращает ее отображение в виде:
+// //  Дата: <число> <месяц на русском> <год> - это <день недели на русском>.
+// //  Время: <часы>:<минуты>:<секунды>
+// // Время, которое будет выведено, также хранится в объекте Date.
+
+
+// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"];
+
+// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+// function getData(data) {
+//     let now = new Date(data);
+//     let fullDate = "Дата: " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " - это " + days[now.getDay()]; 
+//     let hour = now.getHours(); 
+//     let minute = now.getMinutes(); 
+//     let second = now.getSeconds(); 
+//     if (minute < 10) { 
+//         minute = "0" + minute; 
+//     }
+//     if (second < 10) { 
+//         second = "0" + second; 
+//     }
+    
+//     let time = "Время: " + hour + ":" + minute + ":" + second;
+    
+//     console.log(fullDate);
+//     console.log(time);
+// }
+// getData('2022-05-25 9:00');
+
+//////////////////Занятие 2.8
+// // Задание 1
+// // С помощью метода массива sort отсортируйте массив people по возрастанию возраста и выведите их в консоль.
+
+
+// const people = [
+//     { name: 'Глеб', age: 29 },
+//     { name: 'Анна', age: 17 },
+//     { name: 'Олег', age: 7 },
+//     { name: 'Оксана', age: 47 }
+//  ];
+//  people.sort(function (a, b) {
+//    if (a.age > b.age) {
+//      return 1;
+//    }
+//    if (a.age < b.age) {
+//      return -1;
+//    }
+//    // a должно быть равным b
+//    return 0;
+//  });
+//  console.log(people)
+
+
+// // Задание 2
+// // Реализуйте функцию filter, которая должна работать аналогично методу массива `filter. За основу возьмите функцию map, которую мы реализовывали на уроке. Чтобы из функции map сделать filter, нужно, в зависимости от результата вызова ruleFunction, принимать решение о том, добавлять в результирующий массив очередной элемент или нет.
+
+
+// function isPositive(number) {
+//     return number > 0;
+// }
+// function isMale(people) {
+//     return people.gender === 'male'
+// }
+
+// function filter(array, ruleFunction) {
+//   const result = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (ruleFunction(array[i])) {
+//       result.push(array[i]);
+//     }
+//   }
+//   return result;
+// };
+    
+// console.log(filter([3, -4, 1, 9], isPositive)); 
+
+// const people = [
+//     {name: 'Глеб', gender: 'male'},
+//     {name: 'Анна', gender: 'female'},
+//     {name: 'Олег', gender: 'male'},
+//     {name: 'Оксана', gender: 'female'}
+// ];
+
+// console.log(filter(people, isMale));
+
+// // Задание 3
+// // Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату. Последней строкой должно выводиться сообщение «30 секунд прошло».
+
+// const timer = (deadline) => {
+// 	const interval = setInterval(() => {
+// 		console.log(new Date());
+// 	}, 3000);
+
+
+// 	setTimeout(() => {
+//     clearInterval(interval);
+//     console.log('30 секунд прошло!')
+//   }, deadline * 1000)
+// };
+
+// timer(30);
+
+// // Задание 4
+// // Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска. Допишите функцию delayForSecond так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте setTimeout.
+
+
+// function delayForSecond(callback) {
+//     setTimeout(callback, 1000);
+//   callback();
+// }
+
+// delayForSecond(function () {
+//   console.log('Привет, Глеб!');
+// })
 
 // Задание 5
-// Дан массив: [1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.
-
-const oneTwo = [1, 1, 1];
-oneTwo.push(2, 2, 2);
-console.log(oneTwo);
-
-// Задание 6
-// Дан массив: [9, 8, 7, 'a', 6, 5]. С помощью метода sort отсортируйте массив и удалите букву 'a' из данного массива. В результате работы программы вывести массив, состоящий из цифр.
-
-let sortArr = [9, 8, 7, 'a', 6, 5];
-sortArr.sort()
-console.log(sortArr);
-sortArr.pop();
-console.log(sortArr);
-
-// Задание 7
-// Дан массив: [9, 8, 7, 6, 5]. Попросить пользователя угадать число (использовать prompt). Если значение, которое ввёл пользователь, есть в массиве, вывести в alert «Угадал», в противном случае вывести «Не угадал».
-
-const array = [9, 8, 7, 6, 5];
-let userAnswer = prompt('Угадай число!');
-userAnswer = Number(userAnswer);
-// console.log(typeof userAnswer)
-let search = array.includes(userAnswer);
-// console.log(search);
-if (search == true) {
-    alert('Угадал');
-    console.log('Угадал');
-} else {
-    alert('Не угадал');
-    console.log('Не угадал');
-}
-
-// Задание 8
-// Дана строка: 'abcdef'. Необходимо, чтобы программа вывела в консоль 'fedcba'.
-
-let str = 'abcdef';
-let arrayStr = str.split('');
-// console.log(arrayStr);
-let reverseArrayStr = arrayStr.reverse();
-// console.log(reverseArrayStr);
-reverseArrayStr = reverseArrayStr.join('');
-console.log(reverseArrayStr);
-
-Задание 9
-Дан массив: [[1, 2, 3,],[4, 5, 6]]. Выведите в консоль массив вида: [1, 2, 3, 4, 5, 6].
-
-const arr = [
-    [1, 2, 3],
-    [4, 5, 6],
-  ];
-  const arr2 = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      arr2.push(arr[i][j]);
-      //console.log(arr[i][j]);
-    }
-  }
-  
-console.log(arr2);
-
-// //Задание 10
-const numbers = [3, 7, 2, 8, 5, 9, 1, 4, 6];
-for (let i = 0; i < numbers.length; i++) {
-    if (i + 1 < numbers.length) {
-    let sum = numbers[i] + numbers[i + 1];
-    console.log(`Сумма текущего элемента ${numbers[i]} и следующего элемента: ${sum}`);
-    }
-}
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
+//   Привет, Глеб!
+//   Прошла одна секунда
+// Правильный порядок:
+//    Прошла одна секунда
+//    Привет, Глеб!
+// Исправьте код, чтобы он выводил сообщения в правильном порядке
 
 
-// //Задание 11
-let getArrSqr = function (array) {
-    const arrSqr = [];
-    for (let i = 0; i < array.length; i++) {
-        arrSqr.push(Math.pow(array[i], 2));
-    }
-    return arrSqr;
-}
-getArrSqr([2, 5, 6, 3, 5]);
+// // Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
+// // а затем вызывает переданный колбэк
+// function delayForSecond(cb) {
+//     setTimeout(() => {
+//         console.log('Прошла одна секунда');
+// 				if(cb) { 	cb(); }
 
-// Задание 13
-// Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив содержащий только отрицательные значения.
+//     }, 1000)
+// }
 
-function filterPositive(array) {
-    let posArr = array.filter(el => el < 0);
-    return posArr;
-  }
-filterPositive([-2, 5, -1, 9, -9]);
+// // Функция sayHi выводит в консоль приветствие для указанного имени
 
+// function sayHi (name) {
+//     console.log(`Привет, ${name}!`);
+// }
+// // Код выше менять нельзя
 
-//Задание 12
-// Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
-
-function getStrLength(arrStr){
-    let strLength = [];
-    for(let i = 0; i < arrStr.length; i++) {
-      strLength.push(arrStr[i].length)  
-    }
-    return strLength
-  }
-  getStrLength(['god', 'name', 'object', 'subzero', 'wasabi']);
+// // Нужно изменить код ниже:
+// delayForSecond(() => {
+//     sayHi('Глеб');
+// });
